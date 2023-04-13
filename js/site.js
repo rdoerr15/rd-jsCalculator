@@ -83,25 +83,21 @@ function sumAll() {
 
 function multiplyAll() {
   let numberString = document.getElementById("numberSeries").value;
-  //numberString = '12345'
 
   let numberArray = numberString.split("");
-  //numberArray = ['1', '2', '3', '3', '4', '5']
 
-  let sum = 1; //running total
+  let product = 1; 
 
   for (let i = 0; i < numberArray.length; i++) {
     let currentNumber = numberArray[i];
-    //currentNumber = '1'
 
     currentNumber = parseInt(currentNumber);
-    //currentNumber = 1
 
-    sum = sum * currentNumber;
+    product = product * currentNumber;
   }
 
   let resultsDiv = document.getElementById("results");
-  resultsDiv.innerText = sum;
+  resultsDiv.innerText = product;
 }
 
 function minimum() {
@@ -157,10 +153,10 @@ function average() {
 
     currentNumber = parseInt(currentNumber);
 
-    totalNumbers = i + 1;
-    sum = sum + currentNumber;
-    avg = sum / totalNumbers;
+    sum = sum + currentNumber
   }
+
+  let avg = sum / numberArray.length
 
   let resultsDiv = document.getElementById("results");
   resultsDiv.innerText = avg;
