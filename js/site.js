@@ -50,43 +50,42 @@ function divide() {
 
   let quotient = numberOne / numberTwo;
 
-    if (numberTwo == 0) {
-        quotient = "Cannot divide by zero!";
-    }
+  if (numberTwo == 0) {
+    quotient = "Cannot divide by zero!";
+  }
 
   let resultsDiv = document.getElementById("results");
   resultsDiv.innerHTML = quotient;
 }
 
 function sumAll() {
-    let numberString = document.getElementById('numberSeries').value;
-    //numberString = '12345'
+  let numberString = document.getElementById("numberSeries").value;
+  //numberString = '12345'
 
-    let numberArray = numberString.split('')
-    //numberArray = ['1', '2', '3', '3', '4', '5']
-    
-    let sum = 0; //running total
+  let numberArray = numberString.split("");
+  //numberArray = ['1', '2', '3', '3', '4', '5']
 
-    for (let i = 0; i < numberArray.length; i++) {
-        
-        let currentNumber = numberArray[i];
-        //currentNumber = '1'
-        
-        currentNumber = parseInt(currentNumber);
-        //currentNumber = 1
+  let sum = 0; //running total
 
-        sum = sum + currentNumber;
-    }
+  for (let i = 0; i < numberArray.length; i++) {
+    let currentNumber = numberArray[i];
+    //currentNumber = '1'
 
-    let resultsDiv = document.getElementById('results');
-    resultsDiv.innerText = sum;
+    currentNumber = parseInt(currentNumber);
+    //currentNumber = 1
+
+    sum = sum + currentNumber;
+  }
+
+  let resultsDiv = document.getElementById("results");
+  resultsDiv.innerText = sum;
 }
 
 function multiplyAll() {
-  let numberString = document.getElementById('numberSeries').value;
+  let numberString = document.getElementById("numberSeries").value;
   //numberString = '12345'
 
-  let numberArray = numberString.split('');
+  let numberArray = numberString.split("");
   //numberArray = ['1', '2', '3', '3', '4', '5']
 
   let sum = 1; //running total
@@ -101,18 +100,68 @@ function multiplyAll() {
     sum = sum * currentNumber;
   }
 
-  let resultsDiv = document.getElementById('results');
+  let resultsDiv = document.getElementById("results");
   resultsDiv.innerText = sum;
 }
 
 function minimum() {
+      let numberString = document.getElementById("numberSeries").value;
 
+      let stringArray = numberString.split("");
+
+      let min = parseInt(stringArray[0]);
+
+      for (let i = 1; i < stringArray.length; i++) {
+        let stringNumber = stringArray[i];
+        let number = parseInt(stringNumber);
+
+        if (number < min) {
+          min = number;
+        }
+
+      }
+
+      let resultsDiv = document.getElementById("results");
+      resultsDiv.innerText = min;
 }
 
 function maximum() {
+  let numberString = document.getElementById("numberSeries").value;
 
+  let stringArray = numberString.split("");
+
+  let max = parseInt(stringArray[0]);
+
+  for (let i = 1; i < stringArray.length; i++) {
+    let stringNumber = stringArray[i];
+    let number = parseInt(stringNumber);
+
+    if (number > max) {
+      max = number;
+    }
+  }
+
+  let resultsDiv = document.getElementById("results");
+  resultsDiv.innerText = max;
 }
 
 function average() {
+  let numberString = document.getElementById("numberSeries").value;
 
+  let numberArray = numberString.split("");
+
+  let sum = 0;
+
+  for (let i = 0; i < numberArray.length; i++) {
+    let currentNumber = numberArray[i];
+
+    currentNumber = parseInt(currentNumber);
+
+    totalNumbers = i + 1;
+    sum = sum + currentNumber;
+    avg = sum / totalNumbers;
+  }
+
+  let resultsDiv = document.getElementById("results");
+  resultsDiv.innerText = avg;
 }
