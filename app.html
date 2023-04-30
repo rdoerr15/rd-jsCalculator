@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Calculator</title>
+    <title>Simple Calculator</title>
 
     <!--bootsrap css-->
     <link
@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="/css/site.css" />
 
     <!--favicon-->
-    <link rel="shortcut icon" href="/img/logoLightBG.jpg" type="image/x-icon" />
+    <link rel="shortcut icon" href="/img/js-calcLogoOnly.png" type="image/x-icon" />
 
 </head>
 
@@ -48,7 +48,7 @@
                <div class="container">
                    <a class="navbar-brand" href="/index.html">
                         <img src="/img/js-calcLogoOnly.png" height="50" />
-                        JavaScript Calculator
+                        Simple Calculator
                     </a>
                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -67,10 +67,10 @@
                                <a class="nav-link" href="/code.html">The Code</a>
                            </li>
                            <li class="nav-item">
-                               <a class="nav-link" href="https://github.com">The Repo</a>
+                               <a class="nav-link" target="_blank" href="https://github.com/rdoerr15/rd-jsCalculator">The Repo</a>
                            </li>
                            <li class="nav-item">
-                               <a class="nav-link" href="https://ryandoerr-portfolio.netlify.app/">About</a>
+                               <a class="nav-link" target="_blank" href="https://ryandoerr-portfolio.netlify.app/">About</a>
                            </li>
                            <li class="nav-item">
                                <a class="nav-link" href="#">Blog</a> <!--CHANGE THIS LINK-->
@@ -81,8 +81,7 @@
            </nav>
     </header>
 
-    <main class="container mt-3">
-        <h1>JS Calculator</h1>
+    <main class="container mt-5">
         <div>
             <label class="form-label">First Number</label>
             <input class="form-control" type="number" 
@@ -104,16 +103,16 @@
             0
         </div>
         <div class="d-flex gap-3">
-            <button class="btn btn-primary" id="btnAdd" onclick="add()">Add (+)</button>
-            <button class="btn btn-info" onclick="subtract()">Subtract (-)</button>
+            <button class="btn btn-success" id="btnAdd" onclick="add()">Add (+)</button>
+            <button class="btn btn-danger" onclick="subtract()">Subtract (-)</button>
             <button class="btn btn-warning" onclick="multiply()">Multiply (x)</button>
-            <button class="btn btn-danger" onclick="divide()">Divide (&div;)</button>
+            <button class="btn btn-info" onclick="divide()">Divide (&div;)</button>
         </div>
         <div class="d-flex gap-3 my-3">
-            <button class="btn btn-outline-primary" id="numberSeries" onclick="sumAll()">Sum All</button>
-            <button class="btn btn-outline-info" onclick="multiplyAll()">Multiply All</button>
-            <button class="btn btn-outline-warning" onclick="minimum()">Minimum</button>
-            <button class="btn btn-outline-danger" onclick="maximum()">Maximum</button>
+            <button class="btn btn-primary" id="numberSeries" onclick="sumAll()">Sum All</button>
+            <button class="btn btn-outline-danger" onclick="multiplyAll()">Multiply All</button>
+            <button class="btn btn-outline-dark" onclick="minimum()">Minimum</button>
+            <button class="btn btn-outline-primary" onclick="maximum()">Maximum</button>
             <button class="btn btn-outline-success" onclick="average()">Average</button>
         </div>
     </main>
@@ -126,17 +125,11 @@
             <img src="/img/logoDarkBG.jpg" height="50" />
             </div>
             <div class="col text-md-end">
-                <a href="https://linkedin.com/my-profile"
+                <a href="https://www.linkedin.com/in/ryan-doerr-39a23626b/"
                 ><i class="socialicons bi bi-linkedin p-2"></i
                 ></a>
-                <a href="https://github.com/my-profile"
+                <a href="https://github.com/rdoerr15"
                 ><i class="socialicons bi bi-github p-2"></i
-                ></a>
-                <a href="https://twitter.com/my-profile"
-                ><i class="socialicons bi bi-twitter p-2"></i
-                ></a>
-                <a href="https://youtube.com/my-profile"
-                ><i class="socialicons bi bi-youtube p-2"></i
                 ></a>
             </div>
             <div class="col text-light order-md-first text-md-start">

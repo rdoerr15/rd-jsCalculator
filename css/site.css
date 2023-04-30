@@ -55,6 +55,18 @@ footer {
 }
 /* end sticky footer*/
 
+.btn-primary1 {
+    --bs-btn-bg: var(--rd-oceangreen-color);
+    --bs-btn-border-color: var(--rd-secondary-color);
+    --bs-btn-hover-bg: var(--rd-sand-color);
+    --bs-btn-hover-border-color: var(--rd-secondary-color);
+    --bs-btn-hover-color: var(--rd-dark-color);
+    transition: all .5s
+}
+.btn-primary1 {
+    color: var(--rd-light-color);
+}
+
 .checklist {
     list-style-type: none;
 }
