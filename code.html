@@ -74,7 +74,7 @@
                                <a class="nav-link" target="_blank" href="https://ryandoerr-portfolio.netlify.app/">About</a>
                            </li>
                            <li class="nav-item">
-                               <a class="nav-link" href="#">Blog</a> <!--CHANGE THIS LINK-->
+                               <a class="nav-link" target="_blank" href="https://blogbook-production.up.railway.app/">Blog</a> <!--CHANGE THIS LINK-->
                            </li>
                        </ul>
                    </div>
@@ -248,7 +248,110 @@ function average() {
                 </pre>
             </div>
             <div class="col-12 col-lg-4">
-                <p>The code is structured into nine separate functions; one for each of the calculation buttons on the app page.</p>
+                <p>
+                  The code is structured into nine separate functions; one for each of the calculation buttons on the app page.
+                  Below you can get a better understanding of how these functions work.
+                </p>
+                <hr>
+                <h5>add( )</h5>
+                  <ul>
+                    <li>Retrieves the values of two HTML input fields with the IDs "firstNumber" and "secondNumber" using document.getElementById("firstNumber").value and document.getElementById("secondNumber").value.</li>
+                    <li>Parses the retrieved values as floating-point numbers using parseFloat() and assigns them to the variables numberOne and numberTwo.</li>
+                    <li>Calculates the sum of numberOne and numberTwo and stores it in the variable sum.</li>
+                    <li>Retrieves the HTML element with the ID "results" using document.getElementById("results") and assigns it to the variable resultsDiv.</li>
+                    <li>Sets the innerHTML property of resultsDiv to the value of sum, updating the content of the HTML element to display the calculated sum.</li>
+                  </ul>
+                <hr>
+                <h5>subtract( )</h5>
+                  <ul>
+                    <li>Retrieves the values of two HTML input fields with the IDs "firstNumber" and "secondNumber".</li>
+                    <li>Parses the retrieved values as floating-point numbers and assigns them to the variables numberOne and numberTwo.</li>
+                    <li>Calculates the difference between numberOne and numberTwo and stores it in the variable difference.</li>
+                    <li>Retrieves the HTML element with the ID "results" and assigns it to the variable resultsDiv.</li>
+                    <li>Sets the innerHTML property of resultsDiv to the value of difference, updating the content of the HTML element to display the calculated difference.</li>
+                  </ul>
+                <hr>
+                <h5>multiply( )</h5>
+                  <ul>
+                    <li>Retrieves the values of two HTML input fields with the IDs "firstNumber" and "secondNumber".</li>
+                    <li>Parses the retrieved values as floating-point numbers and assigns them to the variables numberOne and numberTwo.</li>
+                    <li>Calculates the product of numberOne and numberTwo and stores it in the variable product.</li>
+                    <li>Retrieves the HTML element with the ID "results" and assigns it to the variable resultsDiv.</li>
+                    <li>Sets the innerHTML property of resultsDiv to the value of product, updating the content of the HTML element to display the calculated product.</li>
+                  </ul>
+                <hr>
+                <h5>divide( )</h5>
+                  <ul>
+                    <li>Retrieves the values of two HTML input fields with the IDs "firstNumber" and "secondNumber".</li>
+                    <li>Parses the retrieved values as floating-point numbers and assigns them to the variables numberOne and numberTwo.</li>
+                    <li>Calculates the quotient of dividing numberOne by numberTwo and stores it in the variable quotient.</li>
+                    <li>Checks if numberTwo is equal to 0. If true, sets the quotient to the string "Cannot divide by zero!" to handle the division by zero scenario.</li>
+                    <li>Retrieves the HTML element with the ID "results" and assigns it to the variable resultsDiv.</li>
+                    <li>Sets the innerHTML property of resultsDiv to the value of quotient, updating the content of the HTML element to display the calculated quotient or the error message.</li>
+                  </ul>
+                <hr>
+                <h5>sumAll( )</h5>
+                <ul>
+                  <li>Retrieves the value of an HTML input field with the ID "numberSeries" using document.getElementById("numberSeries").value. This input field is expected to contain a series of numbers as a string.</li>
+                  <li>Splits the numberString into an array of individual characters using the split("") method, creating an array where each element represents a single character from the string.</li>
+                  <li>Initializes a variable sum with a value of 0 to store the cumulative sum of the numbers.</li>
+                  <li>Starts a for loop that iterates over each element in the numberArray.</li>
+                  <li>Inside the loop, retrieves the current character from the numberArray using numberArray[i] and assigns it to the variable currentNumber.</li>
+                  <li>Converts the currentNumber from a string to an integer using parseInt(currentNumber).</li>
+                  <li>Adds the currentNumber to the sum variable using the expression sum = sum + currentNumber, updating the cumulative sum.</li>
+                  <li>Retrieves the HTML element with the ID "results" using document.getElementById("results") and assigns it to the variable resultsDiv.</li>
+                  <li>Sets the innerText property of resultsDiv to the value of sum, updating the content of the HTML element to display the calculated sum.</li>
+                </ul>
+                <hr>
+                <h5>multiplyAll( )</h5>
+                <ul>
+                  <li>Retrieves the value of the HTML input field with the ID "numberSeries" using document.getElementById("numberSeries").value, which is expected to contain a series of numbers as a string.</li>
+                  <li>Splits the numberString into an array of individual characters using the split("") method, creating an array where each element represents a single character from the string.</li>
+                  <li>Initializes a variable product with a value of 1 to store the cumulative product of the numbers.</li>
+                  <li>Starts a for loop that iterates over each element in the numberArray.</li>
+                  <li>Inside the loop, retrieves the current character from the numberArray using numberArray[i] and assigns it to the variable currentNumber.</li>
+                  <li>Converts the currentNumber from a string to an integer using parseInt(currentNumber).</li>
+                  <li>Multiplies the currentNumber with the product variable using the expression product = product * currentNumber, updating the cumulative product.</li>
+                  <li>Retrieves the HTML element with the ID "results" using document.getElementById("results") and assigns it to the variable resultsDiv.</li>
+                  <li>Sets the innerText property of resultsDiv to the value of product, updating the content of the HTML element to display the calculated product.</li>
+                </ul>
+                <hr>
+                <h5>minimum( )</h5>
+                <ul>
+                  <li>Retrieves the value of an HTML input field with the ID "numberSeries" using document.getElementById("numberSeries").value.</li>
+                  <li>Splits the retrieved string into an array of individual characters using the split("") method and assigns it to the variable stringArray.</li>
+                  <li>Parses the first element of stringArray as an integer using parseInt(stringArray[0]) and assigns it to the variable min as the initial minimum value.</li>
+                  <li>Iterates over stringArray starting from the second element (i = 1) using a for loop.</li>
+                  <li>Converts each character in stringArray to an integer using parseInt(stringNumber) and assigns it to the variable number.</li>
+                  <li>Checks if number is less than the current minimum value min. If true, updates min to number.</li>
+                  <li>Retrieves the HTML element with the ID "results" and assigns it to the variable resultsDiv.</li>
+                  <li>Sets the innerText property of resultsDiv to the value of min, updating the content of the HTML element to display the minimum value.</li>
+                </ul>
+                <hr>
+                <h5>maximum( )</h5>
+                <ul>
+                  <li>Retrieves the value of an HTML input field with the ID "numberSeries".</li>
+                  <li>Splits the retrieved string into an array of individual characters and assigns it to the variable stringArray.</li>
+                  <li>Parses the first element of stringArray as an integer and assigns it to the variable max as the initial maximum value.</li>
+                  <li>Iterates over stringArray starting from the second element.</li>
+                  <li>Converts each character in stringArray to an integer and assigns it to the variable number.</li>
+                  <li>Checks if number is greater than the current maximum value max. If true, updates max to number.</li>
+                  <li>Retrieves the HTML element with the ID "results" and assigns it to the variable resultsDiv.</li>
+                  <li>Sets the innerText property of resultsDiv to the value of max, updating the content of the HTML element to display the maximum value.</li>
+                </ul>
+                <hr>
+                <h5>average( )</h5>
+                <ul>
+                  <li>Retrieves the value of an HTML input field with the ID "numberSeries".</li>
+                  <li>Splits the retrieved string into an array of individual characters and assigns it to the variable numberArray.</li>
+                  <li>Initializes the sum variable to 0.</li>
+                  <li>Iterates over numberArray using a for loop.</li>
+                  <li>Converts each character in numberArray to an integer and assigns it to the variable currentNumber.</li>
+                  <li>Adds currentNumber to the sum variable.</li>
+                  <li>Calculates the average by dividing the sum by the length of numberArray and assigns it to the variable avg.</li>
+                  <li>Retrieves the HTML element with the ID "results" and assigns it to the variable resultsDiv.</li>
+                  <li>Sets the innerText property of resultsDiv to the value of avg, updating the content of the HTML element to display the average value.</li>
+                </ul>
             </div>
         </div>
     </main>
